@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     api_url_user = requests.get(
         f"https://jsonplaceholder.typicode.com/users/").json()
-    
+
     user_tasks = []
     json_file = {}
 
