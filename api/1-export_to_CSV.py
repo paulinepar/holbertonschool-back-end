@@ -13,7 +13,7 @@ if __name__ == '__main__':
     id_user = int(argv[1])
 
     api_url_todos = requests.get(
-        "https://jsonplaceholder.typicode.com/todos/?userId=2").json()
+        f"https://jsonplaceholder.typicode.com/todos/?userId={id_user}").json()
 
     api_url_user = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{id_user}").json()
