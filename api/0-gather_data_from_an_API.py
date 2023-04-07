@@ -26,7 +26,7 @@ if __name__ == '__main__':
             TOTAL_NUMBER_OF_TASKS += 1
             if value['completed']:
                 NUMBER_OF_DONE_TASKS += 1
-    print(f'Employee {EMPLOYEE_NAME} is done with'
+    print(f'Employee {EMPLOYEE_NAME} is done with '
           f'tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):')
     for data in api_url_todos:
         if data['completed'] and data['userId'] == id_user:
