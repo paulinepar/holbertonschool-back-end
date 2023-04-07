@@ -17,14 +17,13 @@ if __name__ == '__main__':
     api_url_user = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{id_user}").json()
 
-
     user_tasks = []
 
     for task in api_url_todos:
         if task['userId'] == id_user:
             new_dict = {"task": task['title'],
-                         "completed": task['completed'],
-                         "username": api_url_user['username']}
+                        "completed": task['completed'],
+                        "username": api_url_user['username']}
             user_tasks.append(new_dict)
 
     with open(f'{id_user}.json', 'w') as file:
